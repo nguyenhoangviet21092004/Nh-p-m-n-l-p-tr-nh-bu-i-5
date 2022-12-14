@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button type="button" onclick="getviet();" style="text-align:center ;">Start</button>
+
+    <script>
+        let text = Math.floor(Math.random() * 10);
+        let random;
+        let turn = 0;
+
+
+
+        function getviet() {
+
+            turn++;
+
+
+            do {
+                random = prompt("Đoán đi cu!");
+
+            } while (0 > random || random > 11); {
+                if (random == "") {
+                    alert("Nhập số đi");
+                } else if (text != random) {
+                    alert("Đen thôi đỏ vẫn thế :))");
+                } else {
+                    alert("Đẳng cấp đấy <3 mày thử " + turn + "mới đúng:))");
+                    text = Math.floor(Math.random() * 10);
+                    turn = 0;
+
+
+                }
+            }
+
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
